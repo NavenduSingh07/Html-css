@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+        #div1{
+            border: 2px solid;
+            padding: 10px;
+            margin: auto;
+            text-align: center;
+            background-color: antiquewhite;
+        }
+        #output{
+            border: 2px solid black;
+            border-radius: 4%;
+            background-color: azure;
+            
+        }
+
+    </style>
+</head>
+<body>
+    <div id="div1">
+        <label for="">Username</label>
+        <input type="text" id="input1">
+        <br><br>
+
+        <label for="">Phone number</label>
+        <input type="text" id="phone">
+        <br><br>
+        
+        <button onclick="otpg()">send otp</button>
+
+        <div id="output">
+
+        </div>
+    </div>
+    <script>
+        function otpg(){
+          //console.log(window)//super most object in js(window)
+         // var x=Math.random()// gives random  number (0-1) in ranege floating value
+         // console.log(x*10000)// increse range 10000
+          var x1 = Math.random()*(9999-1000)+1000 // 4 digit hightest no.
+          //console.log(x1) //value include decimal
+          var otp= Math.floor(x1)//remove desimal digit
+          console.log(otp)
+          document.getElementById("output").innerHTML="dear customar your otp is: "+otp;
+
+        }
+
+    </script>
+</body>
+</html>

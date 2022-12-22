@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+</head>
+<body>
+     
+    <script>
+        //to get live location
+        var successCallback=(position)=>console.log(position)
+        var errorCallback=(position)=>console.error(position)
+        navigator.geolocation.getCurrentPosition(successCallback,errorCallback)//fanction call
+    </script>
+    
+</body>
+</html>

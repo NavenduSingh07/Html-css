@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #myinput{
+            width: 100%;
+        }
+        table{
+            border: 2px solid black;
+            width: 100%;
+            
+
+        }
+        .header th{
+            width: 500%;
+            border: 2px solid black;
+            background-color: aquamarine;
+            
+        }
+        tr td{
+            width: 500px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" name="" id="myinput" placeholder="nemes.." onkeyup="searchfun()">
+    <br><br>
+    <table id="mytable">
+
+        <tr class="header">
+            <th>Name</th>
+            <th>Degree</th>
+            <th>Profession</th>
+        </tr>
+
+        <tr>
+            <td>shashi</td>
+            <td>msc</td>
+            <td>full stack developer</td>
+        </tr>
+
+        <tr>
+            <td>dashwanth</td>
+            <td>BE</td>
+            <td>Front end developer</td>
+        </tr>
+
+        <tr>
+            <td>harsha</td>
+            <td>be</td>
+            <td>SQL developer</td>
+        </tr>
+    </table>
+
+    <script>
+        function searchfun()
+        {
+            let filter=document.getElementById("myinput").value.toUpperCase();
+                
+            let mytable=document.getElementById("mytable");
+
+              let tr=mytable.getElementsByTagName("tr");
+              for ( var i=1; i<tr.length; i++)
+              {  
+                let td=tr[i].getElementsByTagName("td")[0];
+
+              }
+
+             if(td)
+             
+                {
+              
+                 let text=td.textContent ||td.innerHTML;
+                
+                if(text.toUpperCase().indexof(filter)>-1)
+                 {
+                    tr[i].style.display="";
+                 
+                 }
+                }else
+                {
+                    tr[i].style.display="none"
+                }
+                
+              
+              
+        }
+    </script>
+    
+</body>
+</html>
